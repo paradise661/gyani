@@ -11797,10 +11797,10 @@ p {
 }
 .home-deals {
   margin-top: 40px;
-  background-color: #ca1a5a;
+  background-color: #c1272f;
 }
 .home-deals .accordion-button {
-  background-color: #ca1a5a;
+  background-color: #c1272f;
   color: #ffffff;
   padding: 0;
   font-size: 0.85rem;
@@ -12115,7 +12115,7 @@ p {
 }
 
 .footer {
-  background-color: #d75383;
+  background-color: #c1272f;
   padding-bottom: 20px;
 }
 .footer .media-wrapper {
