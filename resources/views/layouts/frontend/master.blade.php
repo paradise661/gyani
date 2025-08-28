@@ -40,7 +40,7 @@
     {
     "@context": "http://schema.org",
     "@type": "TravelAgency",
-    "name": "The Nepal Holidays",
+    "name": "Gyani Holidays",
     "aggregateRating": {
         "@type": "AggregateRating",
         "ratingValue": "4.5",
