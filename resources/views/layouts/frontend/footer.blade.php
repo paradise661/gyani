@@ -197,7 +197,7 @@
 <section class="copyright">
     <div class="container">
         <div class="d-flex justify-content-center w-100">
-            <p>Copyright &copy {{ date('Y') }} Flights Gyani Pvt Ltd . All Rights Reserved | Made with <i
+            <p>Copyright &copy {{ date('Y') }} Gyani Holidays . All Rights Reserved | Made with <i
                     class="fa fa-heart"></i> by <a class="text-secondary" href="https://paradiseit.com.np/"
                     target="_blank"> Paradise InfoTech</a></p>
         </div>
