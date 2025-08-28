@@ -119,7 +119,7 @@
                     <div class="media-wrapper">
                         <a href="/">
                             <img src="{{ asset($setting['site_footer_logo'] ?? $setting['site_main_logo']) }}"
-                                alt="Nepal Holidays">
+                                alt="Gyani Holidays">
                         </a>
                     </div>
                     <p>{{ $setting['site_information'] }}</p>

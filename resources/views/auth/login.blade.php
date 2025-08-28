@@ -1,13 +1,13 @@
 <!DOCTYPE html>
-<html lang="en" class="light-style customizer-hide" dir="ltr" data-theme="theme-default" data-assets-path=""
-    data-template="vertical-menu-template-free">
+<html class="light-style customizer-hide" data-theme="theme-default" data-assets-path=""
+    data-template="vertical-menu-template-free" lang="en" dir="ltr">
 
 <head>
     <meta charset="utf-8" />
     <meta name="viewport"
         content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" />
 
-    <title>The Nepal Holidays</title>
+    <title>Gyani Holidays</title>
 
     <meta name="description" content="" />
 
@@ -28,10 +28,10 @@
     <link rel="stylesheet" href="{{ asset('admin/assets/vendor/fonts/boxicons.css') }}" />
 
     <!-- Core CSS -->
-    <link rel="stylesheet" href="{{ asset('admin/assets/vendor/css/core.css') }}"
-        class="template-customizer-core-css" />
-    <link rel="stylesheet" href="{{ asset('admin/assets/vendor/css/theme-default.css') }}"
-        class="template-customizer-theme-css" />
+    <link class="template-customizer-core-css" rel="stylesheet"
+        href="{{ asset('admin/assets/vendor/css/core.css') }}" />
+    <link class="template-customizer-theme-css" rel="stylesheet"
+        href="{{ asset('admin/assets/vendor/css/theme-default.css') }}" />
     <link rel="stylesheet" href="{{ asset('admin/assets/css/demo.css') }}" />
 
     <!-- Vendors CSS -->
@@ -59,7 +59,7 @@
                     <div class="card-body">
                         <!-- Logo -->
                         <div class="app-brand justify-content-center">
-                            <a href="{{ route('login') }}" class="app-brand-link gap-2">
+                            <a class="app-brand-link gap-2" href="{{ route('login') }}">
                                 <span class="app-brand-logo demo">
                                 </span>
                                 <img src="{{ $settings['site_fav_icon'] ? asset($settings['site_fav_icon']) : asset('storage/logo.png') }}"
@@ -67,15 +67,15 @@
                             </a>
                         </div>
                         <!-- /Logo -->
-                        <h4 class="mb-2">Welcome to The Nepal Holidays!</h4>
+                        <h4 class="mb-2">Welcome to The Gyani Holidays!</h4>
                         <p class="mb-4">Please sign-in to your account</p>
 
-                        <form id="formAuthentication" class="mb-3" action="{{ route('login') }}" method="POST">
+                        <form class="mb-3" id="formAuthentication" action="{{ route('login') }}" method="POST">
                             @csrf
                             <div class="mb-3">
-                                <label for="email" class="form-label">Email or Username</label>
-                                <input type="text" class="form-control @error('email') is-invalid @enderror"
-                                    id="email" name="email" placeholder="Enter your email or username"
+                                <label class="form-label" for="email">Email or Username</label>
+                                <input class="form-control @error('email') is-invalid @enderror" id="email"
+                                    type="text" name="email" placeholder="Enter your email or username"
                                     value="{{ old('email') }}" autofocus />
 
                                 @error('email')
@@ -94,12 +94,12 @@
                                     @endif
                                 </div>
                                 <div class="input-group input-group-merge">
-                                    <input type="password" id="myInput"
-                                        class="form-control @error('password') is-invalid @enderror" name="password"
+                                    <input class="form-control @error('password') is-invalid @enderror" id="myInput"
+                                        type="password" name="password"
                                         placeholder="&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;"
                                         aria-describedby="password" />
-                                    <span class="input-group-text cursor-pointer" onclick="myFunction()"
-                                        id=""><i class="bx bx-hide"></i></span>
+                                    <span class="input-group-text cursor-pointer" id=""
+                                        onclick="myFunction()"><i class="bx bx-hide"></i></span>
 
                                     @error('password')
                                         <span class="invalid-feedback" role="alert">
@@ -110,7 +110,7 @@
                             </div>
                             <div class="mb-3">
                                 <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" name="remember" id="remember"
+                                    <input class="form-check-input" id="remember" type="checkbox" name="remember"
                                         {{ old('remember') ? 'checked' : '' }} />
                                     <label class="form-check-label" for="remember-me"> Remember Me </label>
                                 </div>
