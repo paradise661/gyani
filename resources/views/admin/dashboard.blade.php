@@ -1,5 +1,5 @@
 @extends('layouts.admin.master')
-@section('title', 'Dashboard - Nepal Holiday')
+@section('title', 'Dashboard - Gyani Holiday')
 
 @section('content')
     <div class="row">
@@ -10,13 +10,16 @@
                         <div class="card-body">
                             <h5 class="card-title text-primary">Hello Admin!🎉</h5>
                             <p class="mb-4">
-                                Welcome to <span class="fw-bold">Nepal Holiday</span> admin panel.
+                                Welcome to <span class="fw-bold">Gyani Holiday</span> admin panel.
                             </p>
                         </div>
                     </div>
                     <div class="col-sm-5 text-center text-sm-left">
                         <div class="card-body pb-0 px-0 px-md-4">
-                            <img src="{{ asset('admin/assets/img/illustrations/man-with-laptop-light.png') }}" height="140" alt="View Badge User" data-app-dark-img="illustrations/man-with-laptop-dark.png" data-app-light-img="illustrations/man-with-laptop-light.png" />
+                            <img data-app-dark-img="illustrations/man-with-laptop-dark.png"
+                                data-app-light-img="illustrations/man-with-laptop-light.png"
+                                src="{{ asset('admin/assets/img/illustrations/man-with-laptop-light.png') }}" height="140"
+                                alt="View Badge User" />
                         </div>
                     </div>
                 </div>
@@ -35,7 +38,7 @@
                             <span class="fw-semibold d-block mb-1">Contacts</span>
 
                             <h3 class="card-title mb-2">{{ $contacts->count() ?? 0 }}</h3>
-                            
+
                         </div>
                     </div>
                 </div>
@@ -50,7 +53,7 @@
                             <span class="fw-semibold d-block mb-1">Posts</span>
 
                             <h3 class="card-title mb-2">{{ $posts->count() ?? 0 }}</h3>
-                            
+
                         </div>
                     </div>
                 </div>
@@ -65,7 +68,7 @@
                             <span class="fw-semibold d-block mb-1">Reviews</span>
 
                             <h3 class="card-title mb-2">{{ $reviews->count() ?? 0 }}</h3>
-                            
+
                         </div>
                     </div>
                 </div>
@@ -79,7 +82,7 @@
                             </div>
                             <span class="fw-semibold d-block mb-1">Teams</span>
 
-                            <h3 class="card-title mb-2">{{ $teams->count() ?? 0 }}</h3>                            
+                            <h3 class="card-title mb-2">{{ $teams->count() ?? 0 }}</h3>
                         </div>
                     </div>
                 </div>
@@ -94,7 +97,7 @@
                             <span class="fw-semibold d-block mb-1">Services</span>
 
                             <h3 class="card-title mb-2">{{ $services->count() ?? 0 }}</h3>
-                            
+
                         </div>
                     </div>
                 </div>
@@ -109,7 +112,7 @@
                             <span class="fw-semibold d-block mb-1">Partners</span>
 
                             <h3 class="card-title mb-2">{{ $partners->count() ?? 0 }}</h3>
-                            
+
                         </div>
                     </div>
                 </div>

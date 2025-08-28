@@ -1,7 +1,7 @@
 @extends('layouts.frontend.master')
 
 @section('seo')
-    <title>{{ $setting['homepage_seo_title'] ?? 'The Nepal Holidays' }}</title>
+    <title>{{ $setting['homepage_seo_title'] ?? 'Gyani Holidays' }}</title>
     <meta name="keywords" content="{{ $setting['homepage_seo_keywords'] ?? '' }}">
     <meta name="description" content="{{ $setting['homepage_seo_description'] ?? '' }}">
     <link rel="canonical" href="{{ Request::url() }}" />
@@ -9,7 +9,7 @@
     {
       "@context": "https://schema.org",
       "@type": "Organization",
-      "name": "The Nepal Holidays",
+      "name": "Gyani Holidays",
       "alternateName": "The Nepal Holidays",
       "url": "https://thenepalholidays.com/",
       "logo": "https://thenepalholidays.com/storage/setting/main_logo-20230314061330.png",
