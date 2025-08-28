@@ -1,0 +1,486 @@
+.card {
+  &-popularpackage {
+    margin-bottom: 40px;
+    border: 1px solid #d9d9d9;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    h2 {
+      padding: 10px !important;
+      background-color: #c22948;
+      color: #ffffff;
+      @include typography(1.25rem, 600, 120%);
+    }
+    &-list {
+      margin-top: 15px !important;
+      .text-link {
+        color: #0185fe;
+        @include typography(1rem, 500, 120%);
+      }
+      .text-link:hover {
+        color: $primary;
+      }
+    }
+    &-list1 {
+      .media-wrapper {
+        @include media_wrapper(110px, 69px, cover);
+      }
+      p {
+        @include typography(0.875rem, 400, 120%);
+      }
+      .text-link {
+        color: #000000;
+        @include typography(0.75rem, 400, 120%);
+      }
+      a:hover {
+        color: $primary-200;
+      }
+    }
+  }
+  &-form {
+    margin-top: 20px;
+    padding-bottom: 10px;
+    h3 {
+      color: $secondary-100;
+      @include typography(1.5rem, 500, 120%);
+    }
+    .vl {
+      @media (max-width: 780px) {
+        display: none;
+      }
+      border-left: 2px solid #d9d9d9;
+      min-height: 620px;
+      margin-left: 45px;
+    }
+    .Required-form {
+      margin-top: 10px;
+      border: 1px solid #ddd;
+      padding: 5px;
+      .form-control {
+        padding-left: 10px !important;
+      }
+      .heading {
+        background-color: #ddd;
+        @include typography(1rem, 500, 120%);
+        color: $grey-200;
+        padding: 10px 10px 10px 5px;
+      }
+      &-travel {
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        margin: 5px 2px 0 2px;
+        @include typography(1rem, 500, 120%);
+        color: $grey-200;
+        .form-control {
+          padding: 0 10px !important;
+          color: $grey-200;
+        }
+      }
+      &-person {
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        margin: 5px 2px 0 0px;
+        @include typography(1rem, 500, 120%);
+        color: $grey-200;
+        select {
+          padding-right: 5px;
+          border-color: $grey-300;
+          border-radius: 5px;
+          color: $grey-200;
+        }
+      }
+      &-city {
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        margin: 5px 2px 0 2px;
+        @include typography(1rem, 500, 120%);
+        color: $grey-200;
+      }
+      &-duration {
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        margin: 5px 2px 0 0px;
+        @include typography(1rem, 500, 120%);
+        color: $grey-200;
+        select {
+          padding-right: 55px;
+          padding-left: 10px;
+          color: $grey-200;
+          border-color: $grey-300;
+          border-radius: 5px;
+        }
+      }
+      &-message {
+        margin: 5px 2px 0 2px;
+        @include typography(1rem, 500, 120%);
+        color: $grey-200;
+      }
+      &-name {
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        margin: 5px 2px 0 2px;
+        @include typography(1rem, 500, 120%);
+        color: $grey-200;
+      }
+      &-email {
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        margin: 5px 2px 0 2px;
+        @include typography(1rem, 500, 120%);
+        color: $grey-200;
+      }
+      &-phone {
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        margin: 5px 2px 0 2px;
+        @include typography(1rem, 500, 120%);
+        color: $grey-200;
+      }
+      &-country {
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        margin: 5px 2px 0 0px;
+        @include typography(1rem, 500, 120%);
+        color: $grey-200;
+        select {
+          padding-right: 55px;
+          padding-left: 10px;
+          color: $grey-200;
+          border-color: $grey-300;
+          border-radius: 5px;
+        }
+      }
+    }
+    .btn {
+      background-color: $primary-100;
+      border: 1px solid #d9d9d9;
+      border-radius: 0%;
+      @include typography(1.25rem, 400, 120%);
+      color: #fff;
+    }
+    .btn:hover {
+      background-color: $secondary;
+    }
+  }
+  &-hotdeals {
+    @media (max-width: 780px) {
+      margin-top: 30px !important;
+    }
+    min-height: 620px;
+    border: 1px solid #d9d9dd;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25);
+    h2 {
+      background-color: $secondary-100;
+      color: #ffffff;
+      @include typography(1.5rem, 500, 120%);
+      height: 48px;
+      padding: 10px 0 5px 10px !important;
+    }
+    h2:hover {
+      background-color: $primary-100;
+    }
+    &-list{
+      ul {
+        list-style-type: square;
+        margin-top: 10px;
+        color: $grey-200;
+      }
+      .hl {
+        border-bottom: 2px solid $grey-300;
+        border-bottom-style: dotted;
+        width: 90%;
+        margin-bottom: 10px;
+      }
+      h5 {
+        color: $secondary-100;
+        @include typography(1.125rem, 500, 120%);
+      }
+      h5:hover {
+        color: $primary;
+      }
+      a{
+        color: $secondary-100;
+        @include typography(1rem, 500, 120%);
+      }
+      a:hover {
+        color: $primary;
+      }
+      p {
+        color: $grey-200;
+        @include typography(1rem, 400, 120%);
+        margin-top: 5px !important;
+        margin-bottom: 5px !important;
+      }
+      // .btn{
+      //   background-color: $secondary-100;
+      //   color: #ffffff;
+      //   border-radius: 8px;
+      //   @include typography(1rem, 400, 120%);
+      // }
+      // .btn:hover{
+      //   background-color: $primary;
+      //   color: #ffffff;
+      // }
+    }
+  }
+  &-activities {
+    @media (max-width: 780px) {
+      margin-top: 30px !important;
+    }
+    min-height: 620px;
+    border: 1px solid #d9d9dd;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25);
+    h2 {
+      background-color: #c22948;
+      color: #ffffff;
+      @include typography(1.5rem, 500, 120%);
+      height: 48px;
+      padding: 10px 0 5px 10px !important;
+    }
+    h2:hover {
+      background-color: $secondary-100;
+    }
+    .headlink {
+      @include typography(1rem, 500, 120%);
+      color: $secondary-100;
+    }
+    .headlink:hover {
+      color: $primary;
+    }
+    &-list {
+      .media-wrapper {
+        @include media_wrapper(110px !important, 69px, cover);
+        margin-left: 5px;
+      }
+      p {
+        @include typography(0.875rem, 400, 120%);
+      }
+      .text-link {
+        color: #000000;
+        @include typography(0.75rem, 400, 120%);
+      }
+      a:hover {
+        color: $primary-200;
+      }
+    }
+    // .btn{
+    //   background-color: #c22948;
+    //   color: #ffffff;
+    //   border-radius: 8px;
+    //   @include typography(1rem, 400, 120%);
+    //   margin-right: 60px;
+    //   margin-left: 5px;
+    // }
+    // .btn:hover{
+    //   background-color: $secondary-100;
+    //   color: #ffffff;
+    // }
+  }
+  &-places {
+    min-height: 620px;
+    border: 1px solid #d9d9dd;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25);
+    @media (max-width: 780px) {
+      margin-top: 30px !important;
+    }
+    h2 {
+      background-color: #c22948;
+      color: #ffffff;
+      @include typography(1.5rem, 500, 120%);
+      height: 48px;
+      padding: 10px 0 5px 10px !important;
+    }
+    h2:hover {
+      background-color: $secondary;
+    }
+    ul {
+      list-style-type: square;
+      margin-top: 10px;
+      color: $grey-200;
+    }
+    h5 {
+      color: $primary-200;
+      @include typography(1.125rem, 500, 120%);
+    }
+    h5:hover {
+      color: $secondary-100;
+    }
+    a {
+      color: $primary-200;
+      @include typography(1rem, 500, 120%);
+    }
+    a:hover {
+      color: $secondary-100;
+    }
+    p {
+      color: $grey-200;
+      @include typography(1rem, 400, 120%);
+      margin-top: 5px !important;
+      margin-bottom: 15px !important;
+    }
+    // .btn{
+    //   background-color: #c22948;
+    //   color: #ffffff;
+    //   border-radius: 8px;
+    //   @include typography(1rem, 400, 120%);
+    //   margin-right: 60px;
+    // }
+    // .btn:hover{
+    //   background-color: $secondary-100;
+    //   color: #ffffff;
+    // }
+    
+  }
+  &-holiday {
+    @media (max-width: 780px) {
+      margin-top: 30px !important;
+    }
+    min-height: 620px;
+    border: 1px solid #d9d9dd;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25);
+    h2 {
+      background-color: #555299;
+      color: #ffffff;
+      @include typography(1.5rem, 500, 120%);
+      height: 48px;
+      padding: 10px 0 5px 10px !important;
+    }
+    h2:hover {
+      background-color: $secondary-100;
+    }
+    &-list {
+      ul {
+        list-style-type: square;
+        margin-top: 10px;
+        color: $grey-200;
+      }
+      .head {
+        color: #555299;
+        @include typography(1.125rem, 500, 120%);
+      }
+      a:hover {
+        color: $primary-200;
+      }
+      a {
+        color: #555299;
+        @include typography(1rem, 600, 120%);
+      }
+      a:hover {
+        color: $primary-200;
+      }
+      p {
+        color: $grey-200;
+        @include typography(1rem, 400, 120%);
+        margin-top: 5px !important;
+        margin-bottom: 15px !important;
+      }
+      // .btn{
+      //   background-color: #555299;
+      //   color: #ffffff;
+      //   border-radius: 8px;
+      //   @include typography(1rem, 400, 120%);
+      //   margin-right: 60px;
+      // }
+      // .btn:hover{
+      //   background-color: $primary-200;
+      //   color: #ffffff;
+      // }
+    }
+  }
+  &-tour {
+    @media (max-width: 780px) {
+      margin-top: 30px !important;
+    }
+    min-height: 620px;
+    border: 1px solid #d9d9dd;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25);
+    h2 {
+      background-color: #3ba877;
+      color: #ffffff;
+      @include typography(1.5rem, 500, 120%);
+      height: 48px;
+      padding: 10px 0 5px 10px !important;
+    }
+    h2:hover {
+      background-color: $secondary-100;
+    }
+    &-list {
+      ul {
+        list-style-type: square;
+        color: $grey-200;
+      }
+      li {
+        margin-top: 20px;
+        margin-bottom: 20px;
+      }
+      a {
+        color: #3ba877;
+        @include typography(1.125rem, 500, 120%);
+      }
+      a:hover {
+        color: $primary;
+      }
+      // .btn{
+      //   background-color: #3ba877;
+      //   color: #ffffff;
+      //   border-radius: 8px;
+      //   @include typography(1rem, 400, 120%);
+      
+      // }
+      // .btn:hover{
+      //   background-color: $primary;
+      //   color: #ffffff;
+      // }
+    }
+  }
+  &-intro {
+    margin-top: 50px;
+    h2 {
+      color: $secondary;
+      @include typography(2rem, 500, 120%);
+    }
+    p {
+      margin-top: 10px !important;
+      color: $grey-200;
+      @include typography(1rem, 400, 150%);
+    }
+  }
+  &-contact {
+    margin-top: 20px;
+    h3 {
+      @include typography(2rem, 600, 120%);
+      color: $secondary;
+    }
+    .row {
+      padding: 0 !important;
+      border: 1px solid #d9d9d9;
+      .inside {
+        padding: 15px 20px;
+        flex-wrap: wrap;
+        .info {
+          padding: 25px 30px;
+        }
+
+        @media (max-width: 994px) {
+          .info {
+            border: 0 !important;
+          }
+        }
+        .icon {
+          color: #ca1a5a;
+          i {
+            font-size: 2.75rem;
+          }
+        }
+        .content {
+          color: #000000;
+          @include typography(1rem, 400, 120%);
+        }
+        a {
+          color: $secondary;
+        }
+        a:hover {
+          color: $primary;
+        }
+      }
+    }
+  }
+}

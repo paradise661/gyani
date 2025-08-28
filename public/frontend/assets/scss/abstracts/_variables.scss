@@ -1,0 +1,32 @@
+$primary: #d75383;
+$primary-100: #ca1a5a;
+$primary-200: #eb2f3c;
+
+$secondary: #26b3f7;
+$secondary-100: #0185fe;
+
+$white: #fff;
+
+$grey: #414141;
+$grey-100: #505050;
+$grey-200: #696969;
+$grey-300: #d4d4d4;
+$grey-400: #565656;
+$grey-500: #939393;
+$accordion-button-active-color: $white;
+$accordion-button-color: $white;
+$breadcrumb-divider-color: $white;
+
+$theme-colors: (
+  "primary": $primary,
+  "primary-100": $primary-100,
+  "primary-200": $primary-200,
+  "secondary": $secondary,
+  "secondary-100": $secondary-100,
+  "grey": $grey,
+  "grey-100": $grey-100,
+  "grey-200": $grey-200,
+  "grey-300": $grey-300,
+  "grey-400": $grey-400,
+  "grey-500": $grey-500,
+);

@@ -1,0 +1,46 @@
+.footer {
+  background-color: $primary;
+  padding-bottom: 20px;
+  .media-wrapper {
+    @include media_wrapper(215px, 90px, contain);
+  }
+  p {
+    color: #ffffff;
+    @include typography(1rem, 400, 150%);
+  }
+  .social {
+    color: #ffffff;
+    @include typography(1.5rem, 700, 150%);
+    i {
+      color: #ffffff;
+      font-size: 1.5rem;
+    }
+    i:hover{
+        color: black;
+    }
+  }
+  .footerlist {
+    margin-top: 80px;
+    ul {
+      margin-top: 40px;
+      color: #ffffff;
+    }
+    a {
+      color: #ffffff;
+      @include typography(1.125rem, 400, 120%);
+    }
+    a:hover {
+      color: black;
+    }
+  }
+}
+
+.copyright{
+    background-color: $primary-100;
+    height: 78px;
+    p{
+        @include typography(1rem,400,150%);
+        color: #ffffff;
+        margin-top: 25px !important;
+    }
+}
