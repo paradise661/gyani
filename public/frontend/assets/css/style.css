@@ -32,10 +32,10 @@
   --bs-gray-700: #495057;
   --bs-gray-800: #343a40;
   --bs-gray-900: #212529;
-  --bs-primary: #d75383;
-  --bs-primary-100: #ca1a5a;
-  --bs-primary-200: #eb2f3c;
-  --bs-secondary: #26b3f7;
+  --bs-primary: #269215;
+  --bs-primary-100: #269215;
+  --bs-primary-200: #269215;
+  --bs-secondary: #c1272f;
   --bs-secondary-100: #0185fe;
   --bs-grey: #414141;
   --bs-grey-100: #505050;
@@ -2846,10 +2846,10 @@ textarea.form-control-lg {
 
 .btn-primary-200 {
   --bs-btn-color: #000;
-  --bs-btn-bg: #eb2f3c;
-  --bs-btn-border-color: #eb2f3c;
+  --bs-btn-bg: #269215;
+  --bs-btn-border-color: #f7f2f3f5;
   --bs-btn-hover-color: #000;
-  --bs-btn-hover-bg: #ee4e59;
+  --bs-btn-hover-bg: #c1272f;
   --bs-btn-hover-border-color: #ed4450;
   --bs-btn-focus-shadow-rgb: 200, 40, 51;
   --bs-btn-active-color: #000;
@@ -2863,8 +2863,8 @@ textarea.form-control-lg {
 
 .btn-secondary {
   --bs-btn-color: #000;
-  --bs-btn-bg: #26b3f7;
-  --bs-btn-border-color: #26b3f7;
+  --bs-btn-bg: #c1272f;
+  --bs-btn-border-color: #c1272f;
   --bs-btn-hover-color: #000;
   --bs-btn-hover-bg: #47bef8;
   --bs-btn-hover-border-color: #3cbbf8;
@@ -2874,8 +2874,8 @@ textarea.form-control-lg {
   --bs-btn-active-border-color: #3cbbf8;
   --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
   --bs-btn-disabled-color: #000;
-  --bs-btn-disabled-bg: #26b3f7;
-  --bs-btn-disabled-border-color: #26b3f7;
+  --bs-btn-disabled-bg: #c1272f;
+  --bs-btn-disabled-border-color: #c1272f;
 }
 
 .btn-secondary-100 {
@@ -3049,7 +3049,7 @@ textarea.form-control-lg {
 }
 
 .btn-outline-secondary {
-  --bs-btn-color: #26b3f7;
+  --bs-btn-color: #c1272f;
   --bs-btn-border-color: #26b3f7;
   --bs-btn-hover-color: #000;
   --bs-btn-hover-bg: #26b3f7;
@@ -6862,7 +6862,7 @@ textarea.form-control-lg {
 }
 
 .link-secondary {
-  color: #26b3f7 !important;
+  color: #c1272f !important;
 }
 .link-secondary:hover, .link-secondary:focus {
   color: #51c2f9 !important;
@@ -11188,7 +11188,7 @@ p {
 }
 .card-popularpackage h2, .card-popularpackage .h2 {
   padding: 10px !important;
-  background-color: #c22948;
+  background-color: #269215;
   color: #ffffff;
   font-size: 1.25rem;
   font-weight: 600;
@@ -11228,14 +11228,14 @@ p {
   line-height: 120%;
 }
 .card-popularpackage-list1 a:hover {
-  color: #eb2f3c;
+  color: #269215;
 }
 .card-form {
   margin-top: 20px;
   padding-bottom: 10px;
 }
 .card-form h3, .card-form .h3 {
-  color: #0185fe;
+  color: #269215;
   font-size: 1.5rem;
   font-weight: 500;
   line-height: 120%;
@@ -11370,7 +11370,7 @@ p {
   border-radius: 5px;
 }
 .card-form .btn {
-  background-color: #ca1a5a;
+  background-color: #269215;
   border: 1px solid #d9d9d9;
   border-radius: 0%;
   font-size: 1.25rem;
@@ -11379,7 +11379,7 @@ p {
   color: #fff;
 }
 .card-form .btn:hover {
-  background-color: #26b3f7;
+  background-color: #c1272f;
 }
 .card-hotdeals {
   min-height: 620px;
@@ -11392,7 +11392,7 @@ p {
   }
 }
 .card-hotdeals h2, .card-hotdeals .h2 {
-  background-color: #0185fe;
+  background-color: #269215;
   color: #ffffff;
   font-size: 1.5rem;
   font-weight: 500;
@@ -11401,7 +11401,7 @@ p {
   padding: 10px 0 5px 10px !important;
 }
 .card-hotdeals h2:hover, .card-hotdeals .h2:hover {
-  background-color: #ca1a5a;
+  background-color: #c1272f;
 }
 .card-hotdeals-list ul {
   list-style-type: square;
@@ -11415,7 +11415,7 @@ p {
   margin-bottom: 10px;
 }
 .card-hotdeals-list h5, .card-hotdeals-list .h5 {
-  color: #0185fe;
+  color: #c1272f;
   font-size: 1.125rem;
   font-weight: 500;
   line-height: 120%;
@@ -11424,7 +11424,7 @@ p {
   color: #d75383;
 }
 .card-hotdeals-list a {
-  color: #0185fe;
+  color: #269215;
   font-size: 1rem;
   font-weight: 500;
   line-height: 120%;
@@ -11451,7 +11451,7 @@ p {
   }
 }
 .card-activities h2, .card-activities .h2 {
-  background-color: #c22948;
+  background-color: #269215;
   color: #ffffff;
   font-size: 1.5rem;
   font-weight: 500;
@@ -11460,13 +11460,13 @@ p {
   padding: 10px 0 5px 10px !important;
 }
 .card-activities h2:hover, .card-activities .h2:hover {
-  background-color: #0185fe;
+  background-color: #c1272f;
 }
 .card-activities .headlink {
   font-size: 1rem;
   font-weight: 500;
   line-height: 120%;
-  color: #0185fe;
+  color: #c1272f;
 }
 .card-activities .headlink:hover {
   color: #d75383;
@@ -11494,7 +11494,7 @@ p {
   line-height: 120%;
 }
 .card-activities-list a:hover {
-  color: #eb2f3c;
+  color: #269215;
 }
 .card-places {
   min-height: 620px;
@@ -11507,7 +11507,7 @@ p {
   }
 }
 .card-places h2, .card-places .h2 {
-  background-color: #c22948;
+  background-color: #269215;
   color: #ffffff;
   font-size: 1.5rem;
   font-weight: 500;
@@ -11516,7 +11516,7 @@ p {
   padding: 10px 0 5px 10px !important;
 }
 .card-places h2:hover, .card-places .h2:hover {
-  background-color: #26b3f7;
+  background-color: #c1272f;
 }
 .card-places ul {
   list-style-type: square;
@@ -11524,22 +11524,22 @@ p {
   color: #696969;
 }
 .card-places h5, .card-places .h5 {
-  color: #eb2f3c;
+  color: #c1272f;
   font-size: 1.125rem;
   font-weight: 500;
   line-height: 120%;
 }
 .card-places h5:hover, .card-places .h5:hover {
-  color: #0185fe;
+  color: #dc3545;
 }
 .card-places a {
-  color: #eb2f3c;
+  color: #269215;
   font-size: 1rem;
   font-weight: 500;
   line-height: 120%;
 }
 .card-places a:hover {
-  color: #0185fe;
+  color: #c1272f;
 }
 .card-places p {
   color: #696969;
@@ -11577,22 +11577,22 @@ p {
   color: #696969;
 }
 .card-holiday-list .head {
-  color: #555299;
+  color: #c1272f;
   font-size: 1.125rem;
   font-weight: 500;
   line-height: 120%;
 }
 .card-holiday-list a:hover {
-  color: #eb2f3c;
+  color: #dc3545;
 }
 .card-holiday-list a {
-  color: #555299;
+  color: #c1272f;
   font-size: 1rem;
   font-weight: 600;
   line-height: 120%;
 }
 .card-holiday-list a:hover {
-  color: #eb2f3c;
+  color: #269215;
 }
 .card-holiday-list p {
   color: #696969;
@@ -11613,7 +11613,7 @@ p {
   }
 }
 .card-tour h2, .card-tour .h2 {
-  background-color: #3ba877;
+  background-color: #269215;
   color: #ffffff;
   font-size: 1.5rem;
   font-weight: 500;
@@ -11622,7 +11622,7 @@ p {
   padding: 10px 0 5px 10px !important;
 }
 .card-tour h2:hover, .card-tour .h2:hover {
-  background-color: #0185fe;
+  background-color: #c1272f;
 }
 .card-tour-list ul {
   list-style-type: square;
@@ -11645,7 +11645,7 @@ p {
   margin-top: 50px;
 }
 .card-intro h2, .card-intro .h2 {
-  color: #26b3f7;
+  color: #c1272f;
   font-size: 2rem;
   font-weight: 500;
   line-height: 120%;
@@ -11664,7 +11664,7 @@ p {
   font-size: 2rem;
   font-weight: 600;
   line-height: 120%;
-  color: #26b3f7;
+  color: #c1272f;
 }
 .card-contact .row {
   padding: 0 !important;
@@ -11695,7 +11695,7 @@ p {
   line-height: 120%;
 }
 .card-contact .row .inside a {
-  color: #26b3f7;
+  color: #c1272f;
 }
 .card-contact .row .inside a:hover {
   color: #d75383;
@@ -11712,7 +11712,7 @@ p {
 }
 .home-slider-popularpackage h2, .home-slider-popularpackage .h2 {
   padding: 10px !important;
-  background-color: #c22948;
+  background-color: #269215;
   color: #ffffff;
   font-size: 1.25rem;
   font-weight: 600;
@@ -11752,7 +11752,7 @@ p {
   line-height: 120%;
 }
 .home-slider-popularpackage-list1 a:hover {
-  color: #eb2f3c;
+  color: #269215;
 }
 .home-slider-slider1 {
   position: relative;
@@ -11918,13 +11918,13 @@ p {
   font-size: 1.25rem;
   font-weight: 500;
   line-height: 120%;
-  color: #eb2f3c;
+  color: #269215;
 }
 .about-explore h2, .about-explore .h2 {
   font-size: 2.25rem;
   font-weight: 600;
   line-height: 120%;
-  color: #26b3f7;
+  color: #c1272f;
 }
 .about-explore p {
   font-size: 1rem;
@@ -12010,7 +12010,7 @@ p {
   font-size: 1rem;
   font-weight: 500;
   line-height: 1.5;
-  color: #eb2f3c;
+  color: #269215;
 }
 .single-content .time {
   margin-top: 10px;
@@ -12048,7 +12048,7 @@ p {
 }
 .single-content .buttons .btn1 {
   padding: 10px 30px;
-  background: #eb2f3c;
+  background: #269215;
   border: 1px solid #d9d9d9;
   border-radius: 8px;
   color: #ffffff;
@@ -12070,11 +12070,11 @@ p {
   line-height: 120%;
 }
 .single-content .buttons .btn2:hover {
-  background-color: #26b3f7;
+  background-color: #c1272f;
 }
 .single-content .buttons .btn3 {
   padding: 10px 30px;
-  background: #26b3f7;
+  background: #c1272f;
   border: 1px solid #d9d9d9;
   border-radius: 8px;
   color: #ffffff;
@@ -12083,7 +12083,7 @@ p {
   line-height: 120%;
 }
 .single-content .buttons .btn3:hover {
-  background-color: #eb2f3c;
+  background-color: #269215;
 }
 .single-content .maincontent {
   margin-top: 60px;
@@ -12177,7 +12177,7 @@ p {
 }
 
 .top {
-  background-color: #d75383;
+  background-color: #269215;
   padding: 5px 0 10px 0;
 }
 .top i {
@@ -13414,9 +13414,9 @@ Sticky Header
     border-bottom-right-radius: 15px;
   }
 }
-.category .headlink {
+.category .headlink {.card-hotdeals-list a
   font-weight: 600;
-  font-size: 1rem;
+  font-size: 1rem;.card-hotdeals-list a
 }
 
 .inner-blog .media-wrapper {
