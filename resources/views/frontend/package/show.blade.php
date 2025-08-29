@@ -121,8 +121,8 @@
                             </li>
                             <li class="nav-item" role="presentation">
                                 <button class="nav-link" id="visa-tab" data-bs-toggle="tab" data-bs-target="#visa-tab-pane"
-                                    type="button" role="tab" aria-controls="visa-tab-pane"
-                                    aria-selected="false">Details</button>
+                                    type="button" role="tab" aria-controls="visa-tab-pane" aria-selected="false">Visa
+                                    Documents</button>
                             </li>
                             {{-- <li class="nav-item" role="presentation">
                                 <button class="nav-link" id="gallery-tab" data-bs-toggle="tab"
