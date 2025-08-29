@@ -171,14 +171,18 @@
                             <div class="tab-pane fade" id="visa-tab-pane" role="tabpanel" aria-labelledby="visa-tab"
                                 tabindex="0">
                                 <div class="mt-4">
-                                    @if ($visa)
+                                    @if ($visa && $visa->isNotEmpty())
                                         @foreach ($visa as $key => $v)
                                             <h4>{{ $key + 1 }}. {{ $v->question ?? '' }}</h4>
                                             {!! $v->answer ?? '' !!}
                                         @endforeach
+                                    @else
+                                        <p>No information available. <a href="/contact-us">(Contact us)</a>
+                                        </p>
                                     @endif
                                 </div>
                             </div>
+
                             <div class="tab-pane fade" id="inclusion-tab-pane" role="tabpanel"
                                 aria-labelledby="inclusion-tab" tabindex="0">
                                 <div class="text mt-3">
