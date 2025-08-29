@@ -18,6 +18,8 @@ use App\Models\Review;
 use App\Models\Services;
 use App\Models\Setting;
 use App\Models\Sliders;
+use App\Models\PackageVisa;
+
 use Barryvdh\DomPDF\PDF as DomPDFPDF;
 use PDF;
 
@@ -56,7 +58,8 @@ class FrontendController extends Controller
             $packages = Package::where('status', 1)->where('id', '!=', $content->id)->limit(5)->get();
             $globalinfo = PackageGlobal::where('package_id', $content->id)->first();
             $faqs = PackageFaq::where('package_id', $content->id)->oldest('order')->get();
-            return view('frontend.package.show', compact(['content', 'globalinfo', 'itineraries', 'faqs']));
+            $visa = PackageVisa::where('package_id', $content->id)->oldest('order')->get();
+            return view('frontend.package.show', compact(['content', 'globalinfo', 'itineraries', 'faqs' , 'visa']));
         } else {
             return view('errors.404');
         }
@@ -163,7 +166,8 @@ class FrontendController extends Controller
         $itineraries = ItenaryPackage::with('itineraryitem')->where('package_id', $package->id)->get();
         $globalinfo = PackageGlobal::where('package_id', $package->id)->first();
         $faqs = PackageFaq::where('package_id', $package->id)->oldest('order')->get();
-        $pdf = PDF::loadView('frontend.package.print', compact('globalinfo', 'itineraries', 'faqs', 'package', 'url'));
+        $visa = PackageVisa::where('package_id', $package->id)->oldest('order')->get();
+        $pdf = PDF::loadView('frontend.package.print', compact('globalinfo', 'itineraries', 'faqs', 'package', 'url' ,'visa'));
         return $pdf->download($package->name . '.pdf');
         // return  $pdf->stream($package->name . '.pdf', array("Attachment" => false));
     }

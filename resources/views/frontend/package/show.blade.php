@@ -113,20 +113,26 @@
                                     data-bs-target="#itinerary-tab-pane" type="button" role="tab"
                                     aria-controls="itinerary-tab-pane" aria-selected="true">Itinerary</button>
                             </li>
-                            <li class="nav-item" role="presentation">
-                                <button class="nav-link" id="faqs-tab" data-bs-toggle="tab" data-bs-target="#faqs-tab-pane"
-                                    type="button" role="tab" aria-controls="faqs-tab-pane"
-                                    aria-selected="false">Faqs</button>
-                            </li>
+
                             <li class="nav-item" role="presentation">
                                 <button class="nav-link" id="inclusion-tab" data-bs-toggle="tab"
                                     data-bs-target="#inclusion-tab-pane" type="button" role="tab"
                                     aria-controls="inclusion-tab-pane" aria-selected="false">Inclusion</button>
                             </li>
                             <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="visa-tab" data-bs-toggle="tab" data-bs-target="#visa-tab-pane"
+                                    type="button" role="tab" aria-controls="visa-tab-pane"
+                                    aria-selected="false">Details</button>
+                            </li>
+                            {{-- <li class="nav-item" role="presentation">
                                 <button class="nav-link" id="gallery-tab" data-bs-toggle="tab"
                                     data-bs-target="#gallery-tab-pane" type="button" role="tab"
                                     aria-controls="gallery-tab-pane" aria-selected="false">Gallery</button>
+                            </li> --}}
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="faqs-tab" data-bs-toggle="tab"
+                                    data-bs-target="#faqs-tab-pane" type="button" role="tab"
+                                    aria-controls="faqs-tab-pane" aria-selected="false">Faqs</button>
                             </li>
                         </ul>
                         <div class="tab-content" id="myTabContent">
@@ -158,6 +164,17 @@
                                         @foreach ($faqs as $key => $faq)
                                             <h4>{{ $key + 1 }}. {{ $faq->question ?? '' }}</h4>
                                             {!! $faq->answer ?? '' !!}
+                                        @endforeach
+                                    @endif
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="visa-tab-pane" role="tabpanel" aria-labelledby="visa-tab"
+                                tabindex="0">
+                                <div class="mt-4">
+                                    @if ($visa)
+                                        @foreach ($visa as $key => $v)
+                                            <h4>{{ $key + 1 }}. {{ $v->question ?? '' }}</h4>
+                                            {!! $v->answer ?? '' !!}
                                         @endforeach
                                     @endif
                                 </div>
