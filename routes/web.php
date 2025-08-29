@@ -23,6 +23,8 @@ use App\Http\Controllers\Admin\PopupController;
 use App\Http\Controllers\Admin\ReviewController;
 use App\Http\Controllers\Admin\SlidersController;
 use App\Http\Controllers\Admin\UserRegisterController;
+use App\Http\Controllers\Admin\PackageVisaController;
+
 
 // use App\Http\Controllers\Admin\VacancyController;
 // use App\Http\Controllers\Admin\VideoController;
@@ -157,4 +159,12 @@ Route::group(['prefix' => 'admin', 'middleware' => ['auth']], function () {
     Route::post('packages/faqs/{package_id}', [PackageFaqController::class, 'store'])->name('packagefaqs.store');
     Route::put('packages/faqs/{package_id}/{packagefaqs}', [PackageFaqController::class, 'update'])->name('packagefaqs.update');
     Route::delete('packages/faqs/{package_id}/{packagefaqs}', [PackageFaqController::class, 'destroy'])->name('packagefaqs.destroy');
+
+
+    Route::get('packages/visa/{package_id}', [PackageVisaController::class, 'index'])->name('packagevisa.index');
+    Route::get('packages/visa/{package_id}/create', [PackageVisaController::class, 'create'])->name('packagevisa.create');
+    Route::get('packages/visa/{package_id}/{packagevisa}/edit', [PackageVisaController::class, 'edit'])->name('packagevisa.edit');
+    Route::post('packages/visa/{package_id}', [PackageVisaController::class, 'store'])->name('packagevisa.store');
+    Route::put('packages/visa/{package_id}/{packagevisa}', [PackageVisaController::class, 'update'])->name('packagevisa.update');
+    Route::delete('packages/visa/{package_id}/{packagevisa}', [PackageVisaController::class, 'destroy'])->name('packagevisa.destroy');
 });

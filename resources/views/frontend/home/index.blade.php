@@ -15,7 +15,7 @@
       "logo": "https://thenepalholidays.com/storage/setting/main_logo-20230314061330.png",
       "sameAs": [
         "https://thenepalholidays.com/",
-        "https://www.facebook.com/theNepalHolidays"
+        "https://www.facebook.com/theNepalHolidayss"
       ]
     }
 </script>
