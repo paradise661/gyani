@@ -58,7 +58,7 @@
                     <div class="col-md-7 col-sm-12">
                         <div class="home-slider-slider1 single-item mt-3">
                             @foreach ($sliders as $key => $slide)
-                                <div class="media-wrapper" style="width:100%; height:400px; overflow:hidden;">
+                                <div class="media-wrapper" style="width:100%; height:410px; overflow:hidden;">
                                     <img src="{{ asset($slide->image) }}" alt="slider-{{ $key }}" />
                                 </div>
                             @endforeach
