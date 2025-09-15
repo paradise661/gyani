@@ -187,17 +187,22 @@
                                                             <div class="col-md-12 mb-3">
                                                                 <label for="homecategory">Select category to display on
                                                                     home</label>
-                                                                @if ($settings['homepagecategory'])
+                                                                @if (!empty($settings['homepagecategory']))
                                                                     <div class="d-flex gap-2 my-3">
-                                                                        @foreach ($setting['homepagecategory'] as $sethomecat)
+                                                                        @foreach ($settings['homepagecategory'] as $sethomecat)
                                                                             @php
-                                                                                $homecat = App\Models\PackageCategory::where('id', $sethomecat)->first();
+                                                                                $homecat = App\Models\PackageCategory::find(
+                                                                                    $sethomecat,
+                                                                                );
                                                                             @endphp
-                                                                            <span
-                                                                                class="badge bg-success">{{ $homecat->name }}</span>
+                                                                            @if ($homecat)
+                                                                                <span
+                                                                                    class="badge bg-success">{{ $homecat->name }}</span>
+                                                                            @endif
                                                                         @endforeach
                                                                     </div>
                                                                 @endif
+
                                                                 <select class="form-control" id="homecategory"
                                                                     data-trigger name="homepagecategory[]"
                                                                     placeholder="This is a placeholder" multiple>
@@ -212,17 +217,23 @@
                                                             <div class="col-md-12">
                                                                 <label for="footercategory">Select category to display on
                                                                     footer</label>
-                                                                @if ($settings['footercategory'])
+                                                                @if (!empty($settings['footercategory']))
                                                                     <div class="d-flex gap-2 my-3">
-                                                                        @foreach ($setting['footercategory'] as $setfotcat)
+                                                                        @foreach ($settings['footercategory'] as $setfotcat)
+                                                                            <!-- fixed -->
                                                                             @php
-                                                                                $footcat = App\Models\PackageCategory::where('id', $setfotcat)->first();
+                                                                                $footcat = App\Models\PackageCategory::find(
+                                                                                    $setfotcat,
+                                                                                );
                                                                             @endphp
-                                                                            <span
-                                                                                class="badge bg-success">{{ $footcat->name }}</span>
+                                                                            @if ($footcat)
+                                                                                <span
+                                                                                    class="badge bg-success">{{ $footcat->name }}</span>
+                                                                            @endif
                                                                         @endforeach
                                                                     </div>
                                                                 @endif
+
                                                                 <select class="form-control" id="footercategory"
                                                                     name="footercategory[]"
                                                                     placeholder="This is a placeholder" multiple>

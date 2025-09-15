@@ -30,16 +30,19 @@
     </div>
 </section>
 
-<header class="main-header header-style-one">
+<header class="container main-header ">
 
     <!-- Main box -->
     <div class="main-box">
+
         <div class="logo-box">
+
             <div class="logo">
                 <a href="{{ route('home') }}">
-                    <img src="{{ asset($setting['site_main_logo']) }}" alt="Gyani Holidays">
+                    <img class="img-fluid" src="{{ asset($setting['site_main_logo']) }}" alt="Gyani Holidays">
                 </a>
             </div>
+
         </div>
 
         <!--Nav Box-->
@@ -93,11 +96,11 @@
             <!-- Main Menu End-->
 
             <div class="outer-box">
-                <a class="info-btn"
+                {{-- <a class="info-btn"
                     href="tel:{{ preg_replace('/\D/', '', $setting['site_phone'] ?? '989 898 9898') }}">
                     <i class="icon fa fa-phone"></i>
                     <small>Call Anytime</small><br> {{ $setting['site_phone'] ?? '989 898 9898' }}
-                </a>
+                </a> --}}
 
                 <div class="ui-btn-outer">
                 </div>
