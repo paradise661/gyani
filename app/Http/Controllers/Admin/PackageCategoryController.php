@@ -103,7 +103,7 @@ class PackageCategoryController extends Controller
      */
     public function destroy(PackageCategory $packagecategory)
     {
-        $this->removeFile($packagecategory->image);
+        removeFile($packagecategory->image);
         $packagecategory->delete();
         return redirect()->route('packagecategories.index')->with('message', 'Delete Successfully');
     }

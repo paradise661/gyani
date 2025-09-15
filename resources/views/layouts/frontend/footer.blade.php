@@ -81,30 +81,38 @@
                     @foreach ($setting['footercategory'] as $tab => $footercat)
                         @php
                             $cats = App\Models\PackageCategory::where('id', $footercat)->first();
-                            $packages = getpackbycats($cats->id, 27);
                         @endphp
-                        @if ($packages->isNotEmpty())
-                            <div class="accordion-item">
-                                <div class="accordion-collapse collapse" id="collapse{{ $tab }}"
-                                    data-bs-parent="#accordionExample" aria-labelledby="heading{{ $tab }}">
-                                    <div class="accordion-body">
-                                        <div class="row">
-                                            <div class="col-md-12">
-                                                <ul>
-                                                    @foreach ($packages as $pckg)
-                                                        <li>
-                                                            <a
-                                                                href="{{ route('packagesingle', $pckg->slug) }}">{{ $pckg->name ?? '' }}</a>
-                                                        </li>
-                                                    @endforeach
-                                                </ul>
+
+                        @if ($cats)
+                            {{-- only proceed if category exists --}}
+                            @php
+                                $packages = getpackbycats($cats->id, 27);
+                            @endphp
+
+                            @if ($packages->isNotEmpty())
+                                <div class="accordion-item">
+                                    <div class="accordion-collapse collapse" id="collapse{{ $tab }}"
+                                        data-bs-parent="#accordionExample" aria-labelledby="heading{{ $tab }}">
+                                        <div class="accordion-body">
+                                            <div class="row">
+                                                <div class="col-md-12">
+                                                    <ul>
+                                                        @foreach ($packages as $pckg)
+                                                            <li>
+                                                                <a
+                                                                    href="{{ route('packagesingle', $pckg->slug) }}">{{ $pckg->name ?? '' }}</a>
+                                                            </li>
+                                                        @endforeach
+                                                    </ul>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
+                            @endif
                         @endif
                     @endforeach
+
                 </div>
             </div>
         </div>

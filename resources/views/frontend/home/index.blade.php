@@ -486,173 +486,181 @@
                         @if ($key != 0)
                             @php
                                 $cats = App\Models\PackageCategory::where('id', $homecat)->first();
-                                $count = $count > 5 ? 1 : $count;
                             @endphp
-                            @if ($count == 1)
-                                @php $packone = getpackbycats($cats->id, 8) @endphp
-                                @if ($packone->isNotEmpty())
-                                    <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
-                                        <div class="card-hotdeals mt-1">
-                                            <a href="{{ route('categorysingle', $cats->slug) }}">
-                                                <h2>{{ $cats->name ?? '' }}</h2>
-                                            </a>
-                                            <div class="card-hotdeals-list">
-                                                <ul>
-                                                    @foreach ($packone as $pckone)
-                                                        <li>
-                                                            <a href="{{ route('packagesingle', $pckone->slug) }}">
-                                                                <h5>{{ $pckone->name ?? '' }}</h5>
-                                                            </a>
-                                                            <p>Available up to {{ $pckone->globalinfo->discount ?? '' }}%
-                                                                <a data-bs-target="#enquirenow"
-                                                                    href="#"data-bs-toggle="modal">(Enquire now)</a>
-                                                            </p>
-                                                            <div class="hl"></div>
-                                                        </li>
-                                                    @endforeach
-                                                </ul>
-                                            </div>
-                                            <div class="d-flex w-100 mt-3 justify-content-center">
-                                                <a class="btn px-3 py-1"
-                                                    href="{{ route('categorysingle', $cats->slug) }}" role="button">View
-                                                    all</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                @endif
-                            @elseif ($count == 3)
-                                @php $packthree = getpackbycats($cats->id, 6) @endphp
-                                @if ($packthree->isNotEmpty())
-                                    <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
-                                        <div class="card-places mt-1">
-                                            <a href="{{ route('categorysingle', $cats->slug) }}">
-                                                <h2>{{ $cats->name ?? '' }}</h2>
-                                            </a>
-                                            <div class="card-places-list">
-                                                <ul>
-                                                    @foreach ($packthree as $pckthree)
-                                                        <li>
-                                                            <a href="{{ route('packagesingle', $pckthree->slug) }}">
-                                                                <h5>{{ $pckthree->name ?? '' }}</h5>
-                                                            </a>
-                                                            <p>{{ stripLetters($pckthree->short_description, 64, '...') }}
-                                                                <a data-bs-toggle="modal" data-bs-target="#enquirenow"
-                                                                    href="#">(Enquire now)</a>
-                                                            </p>
-                                                        </li>
-                                                    @endforeach
-                                                </ul>
-                                            </div>
-                                            <div class="d-flex w-100 mt-3 justify-content-center">
-                                                <a class="btn px-3 py-1"
-                                                    href="{{ route('categorysingle', $cats->slug) }}" role="button">View
-                                                    all</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                @endif
-                            @elseif ($count == 4)
-                                @php $packfour = getpackbycats($cats->id, 8) @endphp
-                                @if ($packfour->isNotEmpty())
-                                    <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
-                                        <div class="card-activities mt-1">
-                                            <a href="{{ route('categorysingle', $cats->slug) }}">
-                                                <h2>{{ $cats->name ?? '' }}</h2>
-                                            </a>
-                                            <div class="card-holiday-list">
-                                                <ul>
-                                                    @foreach ($packfour as $pckfour)
-                                                        <li>
-                                                            <a class="head"
-                                                                href="{{ route('packagesingle', $pckfour->slug) }}">{{ $pckfour->name ?? '' }}</a>
-                                                            <p>({{ $pckfour->globalinfo->duration ?? '' }}) <a
-                                                                    data-bs-toggle="modal" data-bs-target="#enquirenow"
-                                                                    href="#">Enquire now</a></p>
-                                                        </li>
-                                                    @endforeach
-                                                </ul>
-                                            </div>
-                                            <div class="d-flex w-100 mt-3 justify-content-center">
-                                                <a class="btn px-3 py-1"
-                                                    href="{{ route('categorysingle', $cats->slug) }}" role="button">View
-                                                    all</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                @endif
-                            @elseif ($count == 5)
-                                @php $packfive = getpackbycats($cats->id, 11) @endphp
-                                @if ($packfive->isNotEmpty())
-                                    <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
-                                        <div class="card-tour mt-1">
-                                            <a href="{{ route('categorysingle', $cats->slug) }}">
-                                                <h2>{{ $cats->name ?? '' }}</h2>
-                                            </a>
-                                            <div class="card-tour-list">
-                                                <ul class="px-3">
-                                                    @foreach ($packfive as $pckfive)
-                                                        <li class="d-flex justify-content-between">
-                                                            <a
-                                                                href="{{ route('packagesingle', $pckfive->slug) }}">{{ $pckfive->name ?? '' }}</a>
-                                                            <a data-bs-toggle="modal" data-bs-target="#enquirenow"
-                                                                href="#"><small>Enquire now</small></a>
-                                                        </li>
-                                                    @endforeach
-                                                </ul>
-                                            </div>
-                                            <div class="d-flex w-100 mt-3 justify-content-center">
-                                                <a class="btn px-3 py-1"
-                                                    href="{{ route('categorysingle', $cats->slug) }}" role="button">View
-                                                    all</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                @endif
-                            @else
-                                @php $packtwo = getpackbycats($cats->id, 6) @endphp
-                                @if ($packtwo->isNotEmpty())
-                                    <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
-                                        <div class="card-activities mt-1">
-                                            <a href="{{ route('categorysingle', $cats->slug) }}">
-                                                <h2>{{ $cats->name ?? '' }}</h2>
-                                            </a>
-                                            @foreach ($packtwo as $pckto)
-                                                <div class="card-activities-list d-flex align-items-center gap-4 mt-1">
-                                                    <div class="media-wrapper d-flex mt-2">
-                                                        <img src="{{ asset($pckto->image) }}"
-                                                            alt="{{ $pckto->name ?? '' }}" />
-                                                    </div>
-                                                    <p>
-                                                        <a class="headlink d-flex mt-2 text-start"
-                                                            href="{{ route('packagesingle', $pckto->slug) }}">{{ $pckto->name ?? '' }}</a>
-                                                        <strong> Tour days :</strong>
-                                                        {{ $pckto->globalinfo->duration ?? '' }} <br />
-                                                        <strong> Destination :</strong>
-                                                        {{ $pckto->destination ?? '' }}<br />
-                                                        <a class="text-link"
-                                                            href="{{ route('packagesingle', $pckto->slug) }}">More
-                                                            Details</a> |
-                                                        <a class="text-link" data-bs-toggle="modal"
-                                                            data-bs-target="#enquirenow" href="#">Send us
-                                                            Enquiry</a>
-                                                    </p>
+
+                            @if ($cats)
+                                @php
+                                    $count = $count > 5 ? 1 : $count;
+                                @endphp
+
+                                @if ($count == 1)
+                                    @php $packone = getpackbycats($cats->id, 8) @endphp
+                                    @if ($packone->isNotEmpty())
+                                        <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+                                            <div class="card-hotdeals mt-1">
+                                                <a href="{{ route('categorysingle', $cats->slug) }}">
+                                                    <h2>{{ $cats->name ?? '' }}</h2>
+                                                </a>
+                                                <div class="card-hotdeals-list">
+                                                    <ul>
+                                                        @foreach ($packone as $pckone)
+                                                            <li>
+                                                                <a href="{{ route('packagesingle', $pckone->slug) }}">
+                                                                    <h5>{{ $pckone->name ?? '' }}</h5>
+                                                                </a>
+                                                                <p>Available up to
+                                                                    {{ $pckone->globalinfo->discount ?? '' }}%
+                                                                    <a data-bs-target="#enquirenow" data-bs-toggle="modal"
+                                                                        href="#">(Enquire now)</a>
+                                                                </p>
+                                                                <div class="hl"></div>
+                                                            </li>
+                                                        @endforeach
+                                                    </ul>
                                                 </div>
-                                            @endforeach
-                                            <div class="d-flex w-100 mt-3 justify-content-center">
-                                                <a class="btn px-3 py-1"
-                                                    href="{{ route('categorysingle', $cats->slug) }}" role="button">View
-                                                    all</a>
+                                                <div class="d-flex w-100 mt-3 justify-content-center">
+                                                    <a class="btn px-3 py-1"
+                                                        href="{{ route('categorysingle', $cats->slug) }}"
+                                                        role="button">View all</a>
+                                                </div>
                                             </div>
                                         </div>
-                                    </div>
+                                    @endif
+                                @elseif ($count == 3)
+                                    @php $packthree = getpackbycats($cats->id, 6) @endphp
+                                    @if ($packthree->isNotEmpty())
+                                        <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+                                            <div class="card-places mt-1">
+                                                <a href="{{ route('categorysingle', $cats->slug) }}">
+                                                    <h2>{{ $cats->name ?? '' }}</h2>
+                                                </a>
+                                                <div class="card-places-list">
+                                                    <ul>
+                                                        @foreach ($packthree as $pckthree)
+                                                            <li>
+                                                                <a href="{{ route('packagesingle', $pckthree->slug) }}">
+                                                                    <h5>{{ $pckthree->name ?? '' }}</h5>
+                                                                </a>
+                                                                <p>{{ stripLetters($pckthree->short_description, 64, '...') }}
+                                                                    <a data-bs-toggle="modal" data-bs-target="#enquirenow"
+                                                                        href="#">(Enquire now)</a>
+                                                                </p>
+                                                            </li>
+                                                        @endforeach
+                                                    </ul>
+                                                </div>
+                                                <div class="d-flex w-100 mt-3 justify-content-center">
+                                                    <a class="btn px-3 py-1"
+                                                        href="{{ route('categorysingle', $cats->slug) }}"
+                                                        role="button">View all</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    @endif
+                                @elseif ($count == 4)
+                                    @php $packfour = getpackbycats($cats->id, 8) @endphp
+                                    @if ($packfour->isNotEmpty())
+                                        <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+                                            <div class="card-activities mt-1">
+                                                <a href="{{ route('categorysingle', $cats->slug) }}">
+                                                    <h2>{{ $cats->name ?? '' }}</h2>
+                                                </a>
+                                                <div class="card-holiday-list">
+                                                    <ul>
+                                                        @foreach ($packfour as $pckfour)
+                                                            <li>
+                                                                <a class="head"
+                                                                    href="{{ route('packagesingle', $pckfour->slug) }}">{{ $pckfour->name ?? '' }}</a>
+                                                                <p>({{ $pckfour->globalinfo->duration ?? '' }}) <a
+                                                                        data-bs-toggle="modal"
+                                                                        data-bs-target="#enquirenow"
+                                                                        href="#">Enquire now</a></p>
+                                                            </li>
+                                                        @endforeach
+                                                    </ul>
+                                                </div>
+                                                <div class="d-flex w-100 mt-3 justify-content-center">
+                                                    <a class="btn px-3 py-1"
+                                                        href="{{ route('categorysingle', $cats->slug) }}"
+                                                        role="button">View all</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    @endif
+                                @elseif ($count == 5)
+                                    @php $packfive = getpackbycats($cats->id, 11) @endphp
+                                    @if ($packfive->isNotEmpty())
+                                        <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+                                            <div class="card-tour mt-1">
+                                                <a href="{{ route('categorysingle', $cats->slug) }}">
+                                                    <h2>{{ $cats->name ?? '' }}</h2>
+                                                </a>
+                                                <div class="card-tour-list">
+                                                    <ul class="px-3">
+                                                        @foreach ($packfive as $pckfive)
+                                                            <li class="d-flex justify-content-between">
+                                                                <a
+                                                                    href="{{ route('packagesingle', $pckfive->slug) }}">{{ $pckfive->name ?? '' }}</a>
+                                                                <a data-bs-toggle="modal" data-bs-target="#enquirenow"
+                                                                    href="#"><small>Enquire now</small></a>
+                                                            </li>
+                                                        @endforeach
+                                                    </ul>
+                                                </div>
+                                                <div class="d-flex w-100 mt-3 justify-content-center">
+                                                    <a class="btn px-3 py-1"
+                                                        href="{{ route('categorysingle', $cats->slug) }}"
+                                                        role="button">View all</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    @endif
+                                @else
+                                    @php $packtwo = getpackbycats($cats->id, 6) @endphp
+                                    @if ($packtwo->isNotEmpty())
+                                        <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+                                            <div class="card-activities mt-1">
+                                                <a href="{{ route('categorysingle', $cats->slug) }}">
+                                                    <h2>{{ $cats->name ?? '' }}</h2>
+                                                </a>
+                                                @foreach ($packtwo as $pckto)
+                                                    <div class="card-activities-list d-flex align-items-center gap-4 mt-1">
+                                                        <div class="media-wrapper d-flex mt-2">
+                                                            <img src="{{ asset($pckto->image) }}"
+                                                                alt="{{ $pckto->name ?? '' }}" />
+                                                        </div>
+                                                        <p>
+                                                            <a class="headlink d-flex mt-2 text-start"
+                                                                href="{{ route('packagesingle', $pckto->slug) }}">{{ $pckto->name ?? '' }}</a>
+                                                            <strong> Tour days :</strong>
+                                                            {{ $pckto->globalinfo->duration ?? '' }} <br />
+                                                            <strong> Destination :</strong>
+                                                            {{ $pckto->destination ?? '' }}<br />
+                                                            <a class="text-link"
+                                                                href="{{ route('packagesingle', $pckto->slug) }}">More
+                                                                Details</a> |
+                                                            <a class="text-link" data-bs-toggle="modal"
+                                                                data-bs-target="#enquirenow" href="#">Send us
+                                                                Enquiry</a>
+                                                        </p>
+                                                    </div>
+                                                @endforeach
+                                                <div class="d-flex w-100 mt-3 justify-content-center">
+                                                    <a class="btn px-3 py-1"
+                                                        href="{{ route('categorysingle', $cats->slug) }}"
+                                                        role="button">View all</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    @endif
                                 @endif
+
+                                @php $count++; @endphp
                             @endif
-                            @php
-                                $count++;
-                            @endphp
                         @endif
                     @endforeach
                 @endif
+
             </div>
         </div>
     </section>
