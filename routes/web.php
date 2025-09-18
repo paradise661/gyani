@@ -167,4 +167,6 @@ Route::group(['prefix' => 'admin', 'middleware' => ['auth']], function () {
     Route::post('packages/visa/{package_id}', [PackageVisaController::class, 'store'])->name('packagevisa.store');
     Route::put('packages/visa/{package_id}/{packagevisa}', [PackageVisaController::class, 'update'])->name('packagevisa.update');
     Route::delete('packages/visa/{package_id}/{packagevisa}', [PackageVisaController::class, 'destroy'])->name('packagevisa.destroy');
+    Route::get('/print/{id}', [PrintController::class, 'print'])->name('print');
+
 });
