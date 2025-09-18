@@ -161,14 +161,18 @@ class FrontendController extends Controller
     }
 
     public function printPdf(Package $package)
-    {
-        $url = url()->previous();
-        $itineraries = ItenaryPackage::with('itineraryitem')->where('package_id', $package->id)->get();
-        $globalinfo = PackageGlobal::where('package_id', $package->id)->first();
-        $faqs = PackageFaq::where('package_id', $package->id)->oldest('order')->get();
-        $visa = PackageVisa::where('package_id', $package->id)->oldest('order')->get();
-        $pdf = PDF::loadView('frontend.package.print', compact('globalinfo', 'itineraries', 'faqs', 'package', 'url' ,'visa'));
-        return $pdf->download($package->name . '.pdf');
-        // return  $pdf->stream($package->name . '.pdf', array("Attachment" => false));
-    }
+{
+    $url = url()->previous();
+    $itineraries = ItenaryPackage::with('itineraryitem')->where('package_id', $package->id)->get();
+    $globalinfo = PackageGlobal::where('package_id', $package->id)->first();
+    $faqs = PackageFaq::where('package_id', $package->id)->oldest('order')->get();
+    $visa = PackageVisa::where('package_id', $package->id)->oldest('order')->get();
+    
+    // Use $package itself as $content for short_description
+    $content = $package;
+
+    $pdf = PDF::loadView('frontend.package.print', compact('globalinfo', 'itineraries', 'faqs', 'package', 'url', 'visa', 'content'));
+    return $pdf->download($package->name . '.pdf');
+}
+
 }
